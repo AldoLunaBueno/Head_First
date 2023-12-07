@@ -33,7 +33,7 @@
           $("#change_me").animate({ top: 500 }, 2000);
         }); //end move_down
         $("#color").click(function () {
-          $("#change_me").css("color", "purple");
+          $("#change_me").css({color: "purple"});
         }); //end color
         $("#disappear").click(function () {
           $("#change_me").toggle("slow");
