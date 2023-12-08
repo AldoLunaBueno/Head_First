@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Jump for Joy</title>
+    <link href="styles/my_style.css" rel="stylesheet">
+    <script 
+        src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" 
+        crossorigin="anonymous"></script>
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <h2>Jump for Joy Sale</h2>
+    </div>
+    <div id="main">
+        <div class="guess_box"><img src="images/jump1.jpg" /></div>
+        <div class="guess_box"><img src="images/jump2.jpg" /></div>
+        <div class="guess_box"><img src="images/jump3.jpg" /></div>
+        <div class="guess_box"><img src="images/jump4.jpg" /></div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".guess_box").click(function () {
+                $(".guess_box p").remove()
+                let discount = Math.floor(Math.random() * 6) + 5
+                let discount_msg = "<p>Your dicount is " + discount + "%</p>"
+                $(this).append(discount_msg)        
+            })            
+        })
+    </script>
+</body>
+
+</html>
