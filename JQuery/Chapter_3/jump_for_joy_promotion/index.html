@@ -19,17 +19,9 @@
         <div class="guess_box"><img src="images/jump2.jpg" /></div>
         <div class="guess_box"><img src="images/jump3.jpg" /></div>
         <div class="guess_box"><img src="images/jump4.jpg" /></div>
+        <span id="result"></span>
     </div>
-    <script>
-        $(document).ready(function () {
-            $(".guess_box").click(function () {
-                $(".guess_box p").remove()
-                let discount = Math.floor(Math.random() * 6) + 5
-                let discount_msg = "<p>Your dicount is " + discount + "%</p>"
-                $(this).append(discount_msg)      
-            })            
-        })
-    </script>
+    <script src="scripts/my_scripts.js"></script>
 </body>
 
 </html>
