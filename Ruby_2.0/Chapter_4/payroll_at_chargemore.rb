@@ -7,6 +7,7 @@ class Employee
     end
     @name = name
   end
+
   def initialize(name)
     self.name = name
   end
@@ -41,6 +42,19 @@ class SalariedEmployee < Employee
 end
 
 class HourlyEmployee < Employee
+    
+  def self.security_guard(name)
+    self.new(name, 19.25, 30)
+  end
+
+  def self.cashier(name)
+    self.new(name, 12.75, 25)
+  end
+
+  def self.janitor(name)
+    self.new(name, 10.50, 20)
+  end
+
   attr_reader :hourly_wage, :hours_per_week
 
   def hourly_wage=(value)
@@ -70,10 +84,22 @@ class HourlyEmployee < Employee
   end
 end
 
-salaried_employee = SalariedEmployee.new("Jane Doe", 50000)
-salaried_employee.print_pay_stub
+=begin
+ivan    = HourlyEmployee.new("Ivan Stokes",     12.75, 25)
+harold  = HourlyEmployee.new("Harold Nguyen",   12.75, 25)
+tamara  = HourlyEmployee.new("Tamara Wells",    12.75, 25)
+susie   = HourlyEmployee.new("Susie Powell",    12.75, 25)
 
-puts
+edwin   = HourlyEmployee.new("Edwin Burgess",   10.50, 20)
+ethel   = HourlyEmployee.new("Ethel Harris",    10.50, 20)
 
-hourly_employee = HourlyEmployee.new("John Smith", 14.97, 30)
-hourly_employee.print_pay_stub
+angela  = HourlyEmployee.new("Angela Matthews", 19.25, 30)
+stewart = HourlyEmployee.new("Stewart Sanchez", 19.25, 30)
+=end
+
+ivan = HourlyEmployee.security_guard("Ivan Stokes")
+harold = HourlyEmployee.security_guard("Harold Nguyen")
+tamara = HourlyEmployee.security_guard("Tamara Wells")
+susie = HourlyEmployee.security_guard("Susie Powell")
+
+puts ivan.print_pay_stub
