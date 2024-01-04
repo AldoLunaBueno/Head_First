@@ -3,6 +3,12 @@ import statistics
 FOLDER = "swimdata/"
 
 def read_swim_data(filename):
+    """Return swim data from a file.
+
+    Given the name of a swimmer's file (in filename), 
+    extract and process all the required data, 
+    then return it to the caller as a tuple.
+    """
     swimmer, age, distance, stroke = filename.removesuffix(".txt").split("-")
 
     with open(FOLDER + filename, "r") as file:
