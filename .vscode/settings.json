@@ -1,5 +1,8 @@
 {
-    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrap": "on",
     "chat.editor.wordWrap": "on",
-    "html.format.wrapAttributes": "auto"
+    "html.format.wrapAttributes": "auto",
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
 }
