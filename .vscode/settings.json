@@ -4,5 +4,6 @@
     "html.format.wrapAttributes": "auto",
     "editor.defaultFormatter": "ms-python.python",
     "editor.formatOnSave": true,
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
+    "julia.environmentPath": "d:\\Repos\\Head_First"
 }
